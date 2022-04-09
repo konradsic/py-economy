@@ -11,7 +11,7 @@ Currently running on version 0.1.0
 ## How it works
 It is very simple:
 * Everything is stored in `.json` files
-* Discord async functions works as same normal, but it returns an embed object that you can send.
+* Discord async functions works same as normal, but it returns an embed object that you can send.
 ## Code example:
 ```py
 import pyeconomy as economy

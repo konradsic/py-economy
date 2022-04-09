@@ -16,19 +16,19 @@ setup(
     name="pyeconomy",
     version=VERSION,
     author="konradsic (Konrad)",
+    url='https://github.com/konradsic/py-economy',
     author_email="<sicinskikonrad@gmail.com>",
     description=DESCRIPTION,
     long_description_content_type="text/markdown",
     long_description=long_description,
     packages=find_packages(),
-    install_requires=['discord'],
+    install_requires=['discord', 'typing'],
     keywords=['python', 'json', 'discord', 'discord-bot', 'cryptocurrency', 'economy'],
     classifiers=[
         "Development Status :: 1 - Planning",
         "Intended Audience :: Developers",
         "Programming Language :: Python :: 3",
-        "Operating System :: Unix",
-        "Operating System :: MacOS :: MacOS X",
-        "Operating System :: Microsoft :: Windows",
+        'Natural Language :: English',
+        'Operating System :: OS Independent',
     ]
 )

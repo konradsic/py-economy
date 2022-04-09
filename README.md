@@ -17,8 +17,8 @@ It is very simple:
 import pyeconomy as economy
 instance = economy.Ecoomy(discord_mode=False, dir="./json/economy/")
 
-user = instance.get_user_by_id(id=124542323) # enter user id here
+user = instance.get_user_by_id(id="1234567890") # enter user id here
 print(f"{user.name}'s balance: {user.balance}")
 ```
 This easy example will create an economy instance (`economy.Economy`) set discord mode to `False` and directory of `.json` files in `./json/economy/`
-Then it searches for a user with id `124542323` and prints it's balance.
+Then it searches for a user with id `1234567890` and prints it's balance.

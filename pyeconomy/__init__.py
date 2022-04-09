@@ -6,6 +6,8 @@ Under the MIT License, see LICENSE file for more details.
 """
 
 import typing as t
+from errors import *
+import os
 
 class Economy:
     """
@@ -27,4 +29,6 @@ class Economy:
         if discord_mode:
             import discord
         if not dir:
-            raise OSError("'dir' arguments is a required argument")
+            raise InvalidParameter("'dir' arguments is a required argument")
+        if not os.path.has_valid_dir_syntax(dir):
+            raise OSError(f"\"{dir}\" is not a valid directory syntax")

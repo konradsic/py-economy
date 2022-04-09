@@ -1,5 +1,6 @@
 # py-economy
 A simple to use economy module.
+WARNING: This project is in alpha release and may be unstable and buggy.
 ## Install
 ```pip install pyeconomy==0.1.0```
 ## Version

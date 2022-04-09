@@ -15,7 +15,7 @@ It is very simple:
 ## Code example:
 ```py
 import pyeconomy as economy
-instance = economy.Ecoomy(discord_mode=False, dir="./json/economy/")
+instance = economy.Economy(discord_mode=False, dir="./json/economy/")
 
 user = instance.get_user_by_id(id="1234567890") # enter user id here
 print(f"{user.name}'s balance: {user.balance}")

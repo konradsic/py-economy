@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: pyeconomy
+Version: 0.1.1
+Summary: A simple to use economy module
+Home-page: https://github.com/konradsic/py-economy
+Author: konradsic (Konrad)
+Author-email: <sicinskikonrad@gmail.com>
+License: UNKNOWN
+Keywords: python,json,discord,discord-bot,cryptocurrency,economy
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# py-economy
+<a href="https://pypi.org/project/pyeconomy/0.1.0/"><img src="https://shields.io/pypi/v/pyeconomy.svg" alt="pypi_version" /></a>
+
+A simple to use economy module.
+WARNING: This project is in alpha release and may be unstable and buggy.
+Developers: Konrad (@konradsic)
+## Install
+```pip install pyeconomy```
+## Version
+Currently running on version 0.1.0
+## Links
+* [PyPi - Python Package Index](https://pypi.org/project/pyeconomy/0.1.0/)
+## How it works
+It is very simple:
+* Everything is stored in `.json` files
+* Discord async functions works same as normal, but it returns an embed object that you can send.
+## Code example:
+```py
+import pyeconomy as economy
+instance = economy.Economy(discord_mode=False)
+
+user = instance.get_user_by_id(id="1234567890") # enter user id here
+if user is None:
+    print("User not found!")
+else:
+    print(f"{user.name}'s balance: {user.balance}")
+```
+This easy example will create an economy instance (`economy.Economy`) set discord mode to `False`.
+Then it searches for a user with id `1234567890`, checks if it exists and prints it's balance.
+
+

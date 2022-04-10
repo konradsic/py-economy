@@ -5,7 +5,7 @@ Copyright (c) 2022 Konrad (@konradsic)
 Under the MIT License, see LICENSE file for more details.
 """
 
-from .json_data import *
+import json_data as data
 from types.user import EconomyUser, update_user
 from errors import InvalidParameter, ValueOutOfRange, EconomyException
 
@@ -27,12 +27,12 @@ class Economy:
     ) -> None:
         if discord_mode:
             import discord
-        create_economy_files()
+        data.create_economy_files()
         self._discord = discord_mode
         self.data = self._get_data()
 
     def _get_data(self) -> None:
-        return json_data.load_json_file("economy_data.json")
+        return data.load_json_file("economy_data.json")
 
     def get_user_by_id(self, id: str = None) -> EconomyUser:
         """

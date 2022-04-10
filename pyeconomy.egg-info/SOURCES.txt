@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+pyeconomy/__init__.py
+pyeconomy/errors.py
+pyeconomy/json_data.py
+pyeconomy.egg-info/PKG-INFO
+pyeconomy.egg-info/SOURCES.txt
+pyeconomy.egg-info/dependency_links.txt
+pyeconomy.egg-info/requires.txt
+pyeconomy.egg-info/top_level.txt

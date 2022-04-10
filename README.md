@@ -9,7 +9,7 @@ Developers: Konrad (@konradsic)
 ## Version
 Currently running on version 0.1.1
 ## Links
-* [PyPi - Python Package Index](https://pypi.org/project/pyeconomy/0.1.11/)
+* [PyPi - Python Package Index](https://pypi.org/project/pyeconomy/0.1.1/)
 ## How it works
 It is very simple:
 * Everything is stored in `.json` files

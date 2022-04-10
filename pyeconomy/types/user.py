@@ -22,47 +22,39 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-class EconomyException(Exception):
-    """
-    Represents an economy exception.
-    
-    Used to handle most exceptions  in this project.
+import typing as t
+from ..json_data import load_json_file, save_json_file
 
-    Arguments
-    -----------------
-        message: :class:`str`
-            An error/exception message
+class EconomyUser:
     """
-    def __init__(self, message):
-        self.message = message
+    Represents a Economy User
 
-    def __str__(self):
-        print(f"Economy function raised an error: {self.message}")
-
-class InvalidParameter(EconomyException):
+    Parameters
+    ------------
+        name: :class:`str`
+            The name of the user
+        id: :class:`str`
+            The id of the user
+        created_at: :class:`float`
+            The name of the user
+        wallet: :class:`str`
+            Money in the wallet of the user
+        bank: :class:`str`
+            Bank balance of the user
     """
-    Inherits EconomyException
-    
-    Used when invalid parameter/s are passed to a function.
+    name: str
+    id: str
+    created_at: float
+    wallet: str
+    bank: str
 
-    Arguments
-    -----------------
-        message: :class:`str`
-            An error/exception message
-    """
-    def __init__(self, message):
-        super().__init__(message)
-
-class ValueOutOfRange(EconomyException):
-    """
-    Inherits EconomyException
-    
-    Used when the value is out of range.
-
-    Arguments
-    -----------------
-        message: :class:`str`
-            An error/exception message
-    """
-    def __init__(self, message):
-        super().__init__(message)
+def update_user(user: EconomyUser):
+    data = load_json_file("./economy/economy_data.json")
+    data[str(user.id)] = {
+        "name": user.name,
+        "id": user.id,
+        "created_at": user.created_at,
+        "wallet": user.wallet,
+        "bank": user.bank
+    }
+    save_json_file("./economy/economy_data.json", data)

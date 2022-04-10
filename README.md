@@ -1,5 +1,5 @@
 # py-economy
-<a href="https://pypi.org/project/pyeconomy/0.1.11/"><img src="https://shields.io/pypi/v/pyeconomy.svg" alt="pypi_version" /></a>
+<a href="https://pypi.org/project/pyeconomy/0.1.1/"><img src="https://shields.io/pypi/v/pyeconomy.svg" alt="pypi_version" /></a>
 
 A simple to use economy module.
 WARNING: This project is in alpha release and may be unstable and buggy.
@@ -7,7 +7,7 @@ Developers: Konrad (@konradsic)
 ## Install
 ```pip install pyeconomy```
 ## Version
-Currently running on version 0.1.11
+Currently running on version 0.1.1
 ## Links
 * [PyPi - Python Package Index](https://pypi.org/project/pyeconomy/0.1.11/)
 ## How it works
@@ -27,3 +27,4 @@ else:
 ```
 This easy example will create an economy instance (`economy.Economy`) set discord mode to `False`.
 Then it searches for a user with id `1234567890`, checks if it exists and prints it's balance.
+Please note, that its an pre-alpha relase and it does not support discord yet. 

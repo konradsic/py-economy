@@ -29,6 +29,8 @@ class Economy:
         if discord_mode:
             import discord
         if not dir:
-            raise InvalidParameter("'dir' arguments is a required argument")
+            raise InvalidParameter("'dir' argument is required")
         if not os.path.has_valid_dir_syntax(dir):
             raise OSError(f"\"{dir}\" is not a valid directory syntax")
+        self._discord = discord_mode
+        self._dir = dir

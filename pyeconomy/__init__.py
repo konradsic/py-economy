@@ -5,7 +5,7 @@ Copyright (c) 2022 Konrad (@konradsic)
 Under the MIT License, see LICENSE file for more details.
 """
 
-import _json_data as data
+import json_data as data
 from types.user import EconomyUser, update_user
 from errors import InvalidParameter, ValueOutOfRange, EconomyException
 

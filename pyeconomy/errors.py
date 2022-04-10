@@ -53,4 +53,16 @@ class InvalidParameter(EconomyException):
     def __init__(self, message):
         super().__init__(message)
 
-raise InvalidParameter("wow!")
+class ValueOutOfRange(EconomyException):
+    """
+    Inherits EconomyException
+    
+    Used when the value is out of range.
+
+    Arguments
+    -----------------
+        message: :class:`str`
+            An error/exception message
+    """
+    def __init__(self, message):
+        super().__init__(message)

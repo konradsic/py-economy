@@ -15,10 +15,13 @@ It is very simple:
 ## Code example:
 ```py
 import pyeconomy as economy
-instance = economy.Economy(discord_mode=False, dir="./json/economy/")
+instance = economy.Economy(discord_mode=False)
 
 user = instance.get_user_by_id(id="1234567890") # enter user id here
-print(f"{user.name}'s balance: {user.balance}")
+if user is None:
+    print("User not found!")
+else:
+    print(f"{user.name}'s balance: {user.balance}")
 ```
-This easy example will create an economy instance (`economy.Economy`) set discord mode to `False` and directory of `.json` files in `./json/economy/`
-Then it searches for a user with id `1234567890` and prints it's balance.
+This easy example will create an economy instance (`economy.Economy`) set discord mode to `False`.
+Then it searches for a user with id `1234567890`, checks if it exists and prints it's balance.

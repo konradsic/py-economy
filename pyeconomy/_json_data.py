@@ -43,6 +43,31 @@ def load_json_file(file : str) -> t.Dict[str, str]:
         json_file = json.load(f)
     return json_file
 
+def save_json_file(file, keys) -> t.Dict[str, str]:
+    """
+    Saves json file
+     
+    Arguments
+    ---------
+        file: :class:`str`
+            A file to save.
+        keys: :class:`dict`
+            A file to save.
+    
+    Returns
+    ---------
+        new_file: :class:`dict`
+            JSON object as a python dictionary.
+    """
+    with open("./economy/" + file, "r") as f:
+        file = json.load(f)
+    with open("./economy/" + file, 'w') as f:
+        json.dump(keys, f)
+    with open("./economy/" + file, "r") as f:
+        new_file = json.load(f)
+    return new_file
+        
+
 def create_economy_files() -> None:
     """
     Creates required JSON files. 

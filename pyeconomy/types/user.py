@@ -23,6 +23,7 @@ SOFTWARE.
 """
 
 import typing as t
+from .._json_data import load_json_file, save_json_file
 
 class EconomyUser:
     """
@@ -46,3 +47,14 @@ class EconomyUser:
     created_at: float
     wallet: str
     bank: str
+
+def update_user(user: EconomyUser):
+    data = load_json_file("./economy/economy_data.json")
+    data[str(user.id)] = {
+        "name": user.name,
+        "id": user.id,
+        "created_at": user.created_at,
+        "wallet": user.wallet,
+        "bank": user.bank
+    }
+    save_json_file("./economy/economy_data.json", data)

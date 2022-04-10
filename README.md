@@ -1,5 +1,5 @@
 # py-economy
-![https://shields.io/pypi/v/pyeconomy.svg](https://pypi.org/project/pyeconomy/0.1.0/)
+<a href="https://pypi.org/project/pyeconomy/0.1.0/"><img src="https://shields.io/pypi/v/pyeconomy.svg" alt="pypi_version" /></a>
 A simple to use economy module.
 WARNING: This project is in alpha release and may be unstable and buggy.
 Developers: Konrad (@konradsic)

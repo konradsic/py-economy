@@ -7,7 +7,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
-VERSION = '0.1.1`'
+VERSION = '0.1.1'
 DESCRIPTION = 'A simple to use economy module'
 LONG_DESCRIPTION = 'Economy module that supports discord, but you could use it where you want! Uses JSON files to store data.'
 
@@ -27,8 +27,11 @@ setup(
     classifiers=[
         "Development Status :: 1 - Planning",
         "Intended Audience :: Developers",
-        "Programming Language :: Python :: 3",
-        'Natural Language :: English',
-        'Operating System :: OS Independent',
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
     ]
 )

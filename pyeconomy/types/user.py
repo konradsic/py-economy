@@ -22,35 +22,27 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-class EconomyException(Exception):
+import typing as t
+
+class EconomyUser:
     """
-    Represents an economy exception.
-    
-    Used to handle most exceptions  in this project.
+    Represents a Economy User
 
-    Arguments
-    -----------------
-        message: :class:`str`
-            An error/exception message
+    Parameters
+    ------------
+        name: :class:`str`
+            The name of the user
+        id: :class:`str`
+            The id of the user
+        created_at: :class:`float`
+            The name of the user
+        wallet: :class:`str`
+            Money in the wallet of the user
+        bank: :class:`str`
+            Bank balance of the user
     """
-    def __init__(self, message):
-        self.message = message
-
-    def __str__(self):
-        print(f"Economy function raised an error: {self.message}")
-
-class InvalidParameter(EconomyException):
-    """
-    Inherits EconomyException
-    
-    Used when invalid parameter/s are passed to a function.
-
-    Arguments
-    -----------------
-        message: :class:`str`
-            An error/exception message
-    """
-    def __init__(self, message):
-        super().__init__(message)
-
-raise InvalidParameter("wow!")
+    name: str
+    id: str
+    created_at: float
+    wallet: str
+    bank: str

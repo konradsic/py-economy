@@ -23,7 +23,7 @@ user = instance.get_user_by_id(id="1234567890") # enter user id here
 if user is None:
     print("User not found!")
 else:
-    print(f"{user.name}'s balance: {user.balance}")
+    print(f"{user.name}'s balance: {user.wallet}")
 ```
 This easy example will create an economy instance (`economy.Economy`) set discord mode to `False`.
 Then it searches for a user with id `1234567890`, checks if it exists and prints it's balance.

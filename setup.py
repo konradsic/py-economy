@@ -17,7 +17,7 @@ setup(
     version=VERSION,
     author="konradsic (Konrad)",
     url='https://github.com/konradsic/py-economy',
-    author_email="<sicinskikonrad@gmail.com>",
+    author_email="sicinskikonrad@gmail.com",
     description=DESCRIPTION,
     long_description_content_type="text/markdown",
     long_description=long_description,

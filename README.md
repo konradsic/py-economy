@@ -1,6 +1,6 @@
 # py-economy
-<a href="https://pypi.org/project/pyeconomy/0.1.11/"><img src="https://shields.io/pypi/v/pyeconomy.svg" alt="pypi_version" /></a>
-<a href="https://pypi.org/project/pyeconomy/0.1.11"><img src="https://img.shields.io/pypi/pyversions/pyeconomy.svg" alt="python supported versions" /></a>
+<a href="https://pypi.org/project/pyeconomy/0.1.13/"><img src="https://shields.io/pypi/v/pyeconomy.svg" alt="pypi_version" /></a>
+<a href="https://pypi.org/project/pyeconomy/0.1.13"><img src="https://img.shields.io/pypi/pyversions/pyeconomy.svg" alt="python supported versions" /></a>
 
 A simple to use economy module.
 WARNING: This project is in alpha release and may be unstable and buggy.
@@ -8,7 +8,7 @@ Developers: Konrad (@konradsic)
 ## Install
 ```pip install pyeconomy```
 ## Version
-Currently running on version 0.1.12
+Currently running on version 0.1.13
 ## Links
 * [PyPi - Python Package Index](https://pypi.org/project/pyeconomy/0.1.1/)
 ## How it works

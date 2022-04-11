@@ -6,8 +6,8 @@ Under the MIT License, see LICENSE file for more details.
 """
 
 from .json_data import *
-from types.user import EconomyUser, update_user
-from errors import InvalidParameter, ValueOutOfRange, EconomyException
+from .types.user import EconomyUser, update_user
+from .errors import InvalidParameter, ValueOutOfRange, EconomyException
 
 class Economy:
     """

@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 import codecs
 import os
 
@@ -10,6 +10,10 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
 VERSION = '0.1.11'
 DESCRIPTION = 'A simple to use economy module'
 LONG_DESCRIPTION = 'Economy module that supports discord, but you could use it where you want! Uses JSON files to store data.'
+PACKAGES = [
+    "pyeconomy",
+    "pyeconomy.types",
+]
 
 # Setting up
 setup(
@@ -21,7 +25,7 @@ setup(
     description=DESCRIPTION,
     long_description_content_type="text/markdown",
     long_description=long_description,
-    packages=find_packages(),
+    packages=PACKAGES,
     install_requires=['discord', 'typing'],
     keywords=['python', 'json', 'discord', 'discord-bot', 'cryptocurrency', 'economy'],
     classifiers=[

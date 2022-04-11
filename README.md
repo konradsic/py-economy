@@ -8,7 +8,7 @@ Developers: Konrad (@konradsic)
 ## Install
 ```pip install pyeconomy```
 ## Version
-Currently running on version 0.1.11
+Currently running on version 0.1.12
 ## Links
 * [PyPi - Python Package Index](https://pypi.org/project/pyeconomy/0.1.1/)
 ## How it works

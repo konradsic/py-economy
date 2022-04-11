@@ -79,5 +79,5 @@ def create_economy_files() -> None:
     files = ["economy_data.json", "config.json"]
     for file in files:
         with open("./economy/" + file, 'w') as f:
-            json.dump({}, f)
+            f.write("{}")
     return None

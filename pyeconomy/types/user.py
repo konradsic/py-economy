@@ -22,8 +22,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
+from turtle import update
 import typing as t
 from ..json_data import load_json_file, save_json_file
+import time
 
 class EconomyUser:
     """
@@ -42,11 +44,50 @@ class EconomyUser:
         bank: :class:`str`
             Bank balance of the user
     """
-    name: str
-    id: str
-    created_at: float
-    wallet: str
-    bank: str
+    name: str = ""
+    id: str = ""
+    created_at: float = 0.0 # time.time()
+    wallet: str = "0"
+    bank: str = "0"
+
+def generate_id(name: str) -> str:
+    time_ = time.time()
+    def numerize():
+        nonlocal name
+        ret = ""
+        for c in name:
+            ret += str(ord(c))
+        return int(ret)
+    name = numerize()
+    retID = str(round(name*time_))
+    retID = retID[:15]
+    if (len(retID) < 15):
+        retID += ("0" * (15-len(retID)))
+
+    return retID
+
+def create_user(name: str):
+    """
+    Creates a new economy user
+
+    Parameters
+    ------------
+        name: :class:`str`
+            The name of the user
+
+    Returns
+    ------------
+        user: :class:`EconomyUser`
+            The new, created user
+
+    """
+    user = EconomyUser()
+    user.name = name
+    user.id = generate_id(name)
+    user.created_at = time.time()
+    user.wallet = "10000"
+    user.bank = "0"
+    update_user(user)
 
 def update_user(user: EconomyUser):
     data = load_json_file("./economy/economy_data.json")

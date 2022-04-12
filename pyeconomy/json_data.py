@@ -24,6 +24,7 @@ SOFTWARE.
 
 import json
 import typing as t
+import os
 
 def load_json_file(file : str) -> t.Dict[str, str]:
     """
@@ -43,7 +44,7 @@ def load_json_file(file : str) -> t.Dict[str, str]:
         json_file = json.load(f)
     return json_file
 
-def save_json_file(file, keys) -> t.Dict[str, str]:
+def save_json_file(file: str, keys: dict) -> t.Dict[str, str]:
     """
     Saves json file
      
@@ -77,6 +78,10 @@ def create_economy_files() -> None:
         None
     """
     files = ["economy_data.json", "config.json"]
+    try:
+        os.mkdir("./economy")
+    except:
+        pass
     for file in files:
         with open("./economy/" + file, 'w') as f:
             f.write("{}")

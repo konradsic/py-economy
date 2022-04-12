@@ -5,8 +5,10 @@ Copyright (c) 2022 Konrad (@konradsic)
 Under the MIT License, see LICENSE file for more details.
 """
 
+__version__ = "0.1.2"
+
 from .json_data import *
-from .types.user import EconomyUser, update_user
+from .types.user import EconomyUser, update_user, create_user
 from .errors import InvalidParameter, ValueOutOfRange, EconomyException
 
 class Economy:
@@ -131,3 +133,22 @@ class Economy:
         update_user(user)
 
         return user
+
+def display_money_with(money : str, what : str) -> str:
+    """
+    Displays money with given parameter
+
+    Parameters
+    -----------
+        money: :class:`str`
+            String, amount of Money
+        what: :class:`str`
+            String, what to replace with
+    
+    Returns
+    -----------
+        money: :class:`str`
+            New string with replacement.
+    """
+    money = str(money)
+    return f"{money:,}".replace(",", what)

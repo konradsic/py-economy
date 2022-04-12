@@ -7,7 +7,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
-VERSION = '0.1.13'
+VERSION = '0.1.2'
 DESCRIPTION = 'A simple to use economy module'
 LONG_DESCRIPTION = 'Economy module that supports discord, but you could use it where you want! Uses JSON files to store data.'
 PACKAGES = [

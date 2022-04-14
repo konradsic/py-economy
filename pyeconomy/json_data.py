@@ -44,7 +44,7 @@ def load_json_file(file : str) -> t.Dict[str, str]:
         json_file = json.load(f)
     return json_file
 
-def save_json_file(file: str, keys: dict) -> t.Dict[str, str]:
+def save_json_file(file: str, keys: dict):
     """
     Saves json file
      

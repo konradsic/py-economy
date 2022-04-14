@@ -98,4 +98,4 @@ def update_user(user: EconomyUser):
         "wallet": user.wallet,
         "bank": user.bank
     }
-    save_json_file("./economy/economy_data.json", data)
+    save_json_file("economy_data.json", data)

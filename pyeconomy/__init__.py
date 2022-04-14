@@ -5,7 +5,7 @@ Copyright (c) 2022 Konrad (@konradsic)
 Under the MIT License, see LICENSE file for more details.
 """
 
-__version__ = "0.1.21"
+__version__ = "0.1.22"
 
 from .json_data import *
 from .types.user import EconomyUser, update_user, create_user

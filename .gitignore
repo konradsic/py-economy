@@ -1,2 +1,4 @@
-/dist/**
+/build/**
 /.venv/**
+/dist/**
+/pyeconomy.egg-info/**

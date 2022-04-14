@@ -10,7 +10,8 @@ Welcome to pyeconomy's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+.. note::
+   This project is under active development and it may be buggy.
 
 Indices and tables
 ==================

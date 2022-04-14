@@ -90,7 +90,7 @@ def create_user(name: str):
     update_user(user)
 
 def update_user(user: EconomyUser):
-    data = load_json_file("./economy/economy_data.json")
+    data = load_json_file("economy_data.json")
     data[str(user.id)] = {
         "name": user.name,
         "id": user.id,

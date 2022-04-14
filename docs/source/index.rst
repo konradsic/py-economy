@@ -7,8 +7,12 @@ Welcome to pyeconomy's documentation!
 =====================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+
+   installation
+   quickstart
+   reference
+
+**pyeconomy** is a simple, easy-to-use Python module, that will help you with making the best economy API, Discord bot etc.
 
 .. note::
    This project is under active development and it may be buggy.

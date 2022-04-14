@@ -1,0 +1,62 @@
+Quickstart
+==========
+
+.. _basics:
+
+Basics
+------
+.. warning::
+    Make sure to install pyeconomy before doing anything with it to avoid any issues. Check the reference :ref:`here <Installing>`
+
+After you installed **pyeconomy** you can finally make your dream economy program!
+Basic setup:
+
+.. code-block:: python
+
+    import pyeconomy as economy
+
+    instance = economy.Economy()
+
+Notice what we did here: we created the basic instance of our economy class. Now lets do somrthing with it
+Baisc program, that checks if the user exists and prints it's balance:
+
+.. code-block:: python
+
+    import pyeconomy as economy
+
+    instance = economy.Economy()
+
+    user_id = input("What is your ID: ")
+
+    try:
+        user = instance.get_user_by_id(user_id)
+        print(f"Your name is: {user.name} and you have {user.wallet}$ in your wallet")
+    except:
+        print("User with that ID doesn't exist!")
+
+We use ``instance.get_user_by_id(user_id)`` to a ``economy.EconomyUser`` object. Then we can print it's name and bank balance
+Well, if we could check for users we can also create users:
+
+.. code-block:: python
+
+    import pyeconomy as economy
+
+    instance = economy.Economy()
+
+    user_name = input("Whats your name: ")
+    user = economy.create_user(user_name)
+    print("User created!")
+
+    user_id = input("What is your ID: ")
+
+    try:
+        user = instance.get_user_by_id(user_id)
+        print(f"Your name is: {user.name} and you have {user.wallet}$ in your wallet")
+    except:
+        print("User with that ID doesn't exist!")
+
+We added just 3 lines of code and we can create users!
+
+.. warning::
+    We don't use ``instance.create_user(name)`` instead of this we use ``economy.create_user(name)``. 
+    This is because create_user is not in ``economy.Economy`` but in ``economy.types.user`` that is imported to use in ``economy`` main file.

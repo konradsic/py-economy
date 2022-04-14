@@ -40,7 +40,7 @@ def load_json_file(file : str) -> t.Dict[str, str]:
         json_file: :class:`dict`
             JSON object as a python dictionary.
     """
-    with open(file, 'r') as f:
+    with open("./economy/" + file, 'r') as f:
         json_file = json.load(f)
     return json_file
 

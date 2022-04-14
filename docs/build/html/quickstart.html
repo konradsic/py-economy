@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Installation" href="installation.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="Installation" href="installation.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>pyeconomy 0.1.21 documentation</title>
+        <title>Quickstart - pyeconomy 0.1.21 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="#"><div class="brand">pyeconomy 0.1.21 documentation</div></a>
+      <a href="index.html"><div class="brand">pyeconomy 0.1.21 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -143,7 +143,7 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="#">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
   <span class="sidebar-brand-text">pyeconomy 0.1.21 documentation</span>
@@ -154,9 +154,9 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul>
+  <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Quickstart</a></li>
 </ul>
 
 </div>
@@ -189,34 +189,62 @@
           </label>
         </div>
         <article role="main">
-          <section id="welcome-to-pyeconomy-s-documentation">
-<h1>Welcome to pyeconomy’s documentation!<a class="headerlink" href="#welcome-to-pyeconomy-s-documentation" title="Permalink to this headline">#</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#id1">Preparing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#id2">Installing</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#basics">Basics</a></li>
-</ul>
-</li>
-</ul>
+          <section id="quickstart">
+<h1>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">#</a></h1>
+<section id="basics">
+<span id="id1"></span><h2>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure to install pyeconomy before doing anything with it to avoid any issues. Check the reference <a class="reference internal" href="installation.html#installing"><span class="std std-ref">here</span></a></p>
 </div>
-<p><strong>pyeconomy</strong> is a simple, easy-to-use Python module, that will help you with making the best economy API, Discord bot etc.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This project is under active development and it may be buggy.</p>
+<p>After you installed <strong>pyeconomy</strong> you can finally make your dream economy program!
+Basic setup:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyeconomy</span> <span class="k">as</span> <span class="nn">economy</span>
+
+<span class="n">instance</span> <span class="o">=</span> <span class="n">economy</span><span class="o">.</span><span class="n">Economy</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Notice what we did here: we created the basic instance of our economy class. Now lets do somrthing with it
+Baisc program, that checks if the user exists and prints it’s balance:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyeconomy</span> <span class="k">as</span> <span class="nn">economy</span>
+
+<span class="n">instance</span> <span class="o">=</span> <span class="n">economy</span><span class="o">.</span><span class="n">Economy</span><span class="p">()</span>
+
+<span class="n">user_id</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"What is your ID: "</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">instance</span><span class="o">.</span><span class="n">get_user_by_id</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Your name is: </span><span class="si">{</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> and you have </span><span class="si">{</span><span class="n">user</span><span class="o">.</span><span class="n">wallet</span><span class="si">}</span><span class="s2">$ in your wallet"</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"User with that ID doesn't exist!"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We use <code class="docutils literal notranslate"><span class="pre">instance.get_user_by_id(user_id)</span></code> to a <code class="docutils literal notranslate"><span class="pre">economy.EconomyUser</span></code> object. Then we can print it’s name and bank balance
+Well, if we could check for users we can also create users:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyeconomy</span> <span class="k">as</span> <span class="nn">economy</span>
+
+<span class="n">instance</span> <span class="o">=</span> <span class="n">economy</span><span class="o">.</span><span class="n">Economy</span><span class="p">()</span>
+
+<span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Whats your name: "</span><span class="p">)</span>
+<span class="n">user</span> <span class="o">=</span> <span class="n">economy</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span><span class="n">user_name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"User created!"</span><span class="p">)</span>
+
+<span class="n">user_id</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"What is your ID: "</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">instance</span><span class="o">.</span><span class="n">get_user_by_id</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Your name is: </span><span class="si">{</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> and you have </span><span class="si">{</span><span class="n">user</span><span class="o">.</span><span class="n">wallet</span><span class="si">}</span><span class="s2">$ in your wallet"</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"User with that ID doesn't exist!"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We added just 3 lines of code and we can create users!</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>We don’t use <code class="docutils literal notranslate"><span class="pre">instance.create_user(name)</span></code> instead of this we use <code class="docutils literal notranslate"><span class="pre">economy.create_user(name)</span></code>.
+This is because create_user is not in <code class="docutils literal notranslate"><span class="pre">economy.Economy</span></code> but in <code class="docutils literal notranslate"><span class="pre">economy.types.user</span></code> that is imported to use in <code class="docutils literal notranslate"><span class="pre">economy</span></code> main file.</p>
 </div>
 </section>
-<section id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">#</a></h1>
-<ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
-</ul>
 </section>
 
         </article>
@@ -224,16 +252,18 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="installation.html">
+          
+          <a class="prev-page" href="installation.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
-                  <span>Next</span>
+                  <span>Previous</span>
                 </div>
+                
                 <div class="title">Installation</div>
+                
               </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -266,8 +296,10 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Welcome to pyeconomy’s documentation!</a></li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#">Quickstart</a><ul>
+<li><a class="reference internal" href="#basics">Basics</a></li>
+</ul>
+</li>
 </ul>
 
           </div>

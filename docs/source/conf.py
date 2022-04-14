@@ -22,7 +22,7 @@ copyright = '2022, konradsic'
 author = 'konradsic'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1.12'
+release = '0.1.21'
 
 
 # -- General configuration ---------------------------------------------------
@@ -55,15 +55,6 @@ html_theme = 'furo'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_css_files = [
-    'styles/custom.css',
-]
-
 html_context = {
     "default-mode": "dark"
-}
-
-html_contexts = {
-    "pygment_light_style": "tango",
-    "pygment_dark_style": "native"
 }

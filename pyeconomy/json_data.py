@@ -60,8 +60,6 @@ def save_json_file(file: str, keys: dict) -> t.Dict[str, str]:
         new_file: :class:`dict`
             JSON object as a python dictionary.
     """
-    with open("./economy/" + file, "r") as f:
-        file = json.load(f)
     with open("./economy/" + file, 'w') as f:
         json.dump(keys, f)
     with open("./economy/" + file, "r") as f:
